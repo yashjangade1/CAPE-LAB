@@ -9,7 +9,7 @@ alphaValues = condValues/(rhoSteel*CpSteel); % thermal diffusivity (m^2/s)
 
 % Define the heat conduction equation
 function [c,f,s] = heatEqn(x,t,u,DuDx)
-    alpha = interp1(condValues, alphaValues, k);
+    alpha = 1; %10, 100
     c = 1/(rhoSteel*CpSteel);
     f = alpha*DuDx;
     s = 0;
